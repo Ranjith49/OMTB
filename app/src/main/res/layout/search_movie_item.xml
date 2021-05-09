@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Movie Poster -->
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="150dp"
+        android:layout_height="210dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_movie_poster"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Movie BookMark -->
+    <ImageView
+        android:id="@+id/movie_bookmark"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/bookmarked"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Movie Name -->
+    <TextView
+        android:id="@+id/movie_name"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="36dp"
+        android:maxLines="3"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/movie_poster"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Movie Name" />
+
+    <!-- Movie year -->
+    <TextView
+        android:id="@+id/movie_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/movie_poster"
+        app:layout_constraintLeft_toRightOf="@+id/movie_poster"
+        tools:text="23 March 2015" />
+
+    <!-- Movie director -->
+    <TextView
+        android:id="@+id/movie_director"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:maxLines="2"
+        app:layout_constraintBottom_toTopOf="@id/movie_year"
+        app:layout_constraintLeft_toRightOf="@+id/movie_poster"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Movie Director" />
+
+    <!-- Movie Plot -->
+    <TextView
+        android:id="@+id/movie_plot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_poster"
+        tools:text="Divided into six segments: Launch, Fights, Stunts, Fast Cars, Locations and Family. It showcase clips from all six films" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_plot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

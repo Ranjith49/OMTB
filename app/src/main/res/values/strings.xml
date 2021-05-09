@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OMDBApp</string>
+    <string name="search_tab">SEARCH MOVIES</string>
+    <string name="bookmark_tab">BOOKMARKS</string>
+    <string name="unknown_tab">UNKNOWN</string>
+
+    <string name="search_movies_hint">Search Movie</string>
+    <string name="bookmarks_empty">No BookMarks to Show</string>
+
+    <string name="detail_director">Director :</string>
+    <string name="detail_year">Year :</string>
+    <string name="detail_genre">Genre :</string>
+    <string name="detail_actors">Actors :</string>
+    <string name="detail_plot">Plot : </string>
+    <string name="detail_runtime">RunTime : </string>
+</resources>
