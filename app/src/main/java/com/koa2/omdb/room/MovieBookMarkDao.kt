@@ -9,6 +9,9 @@ interface MovieBookMarkDao {
     @Query("select * from movie_bookmarks order by uid desc")
     fun getAllMovies(): Flow<List<MovieBookMarkData>>
 
+    @Query("select * from movie_bookmarks order by uid desc")
+    suspend fun getAllMoviesInline(): List<MovieBookMarkData>
+
     @Query("select movieId from movie_bookmarks where movieId = :movieId")
     suspend fun isBookMarked(movieId: String): String?
 

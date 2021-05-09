@@ -11,17 +11,12 @@ import javax.inject.Inject
 
 class BookMarkMovieUseCase @Inject constructor(private val bookMarkRepository: MovieBookMarkRepository) {
 
-    companion object {
-        const val TAG = AppConstants.TAG.plus("-BookMarkUseCase")
-    }
-
     fun getAllBookMarks(): Flow<List<MovieBookMarkData>> {
         return bookMarkRepository.getAllBookMarks()
     }
 
     suspend fun toggleBookMark(data: MovieBookMarkData) {
         val isBookMarked = bookMarkRepository.isBookMarked(data.movieId)
-        Log.d(TAG, "BookMarked status : $isBookMarked")
         if (isBookMarked) {
             bookMarkRepository.deleteMovie(data.movieId)
         } else {
