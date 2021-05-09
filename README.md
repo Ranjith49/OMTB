@@ -3,7 +3,7 @@ Android application using OMTB API's
 
 http://www.omdbapi.com/
 
-Application Explained : 
+**Application Explained :** 
 
 a) When application is launched , User will see a search movies tab with search bar 
 
