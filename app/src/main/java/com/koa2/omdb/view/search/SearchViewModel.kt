@@ -29,7 +29,7 @@ class SearchViewModel @Inject constructor(
 
     fun searchMovies(search: String?) {
         Log.d(TAG, "Search movies : $search")
-        if (TextUtils.isEmpty(search)) {
+        if (search.isNullOrEmpty()) {
             searchMovieError.postValue(EMPTY_SEARCH_TEXT)
         } else {
             searchInProgress.postValue(true)
